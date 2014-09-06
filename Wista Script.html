@@ -2,13 +2,13 @@
 <script src="http://munchkin.marketo.net/munchkin.js"type="text/javascript"></script>
   
 <!--Video embed (this is what embeds the Wistia player)-->
-<div id="wistia_{{my.videoID:default=29b0fbf547}}" class="wistia_embed" style="width:{{my.videowidth:default=550}}px;height:{{my.videoheight:default=309}}px;" data-video-width="{{my.videowidth:default=550}}" data-video-height="{{my.videoheight:default=309}}">&nbsp;</div>
+<div id="wistia_29b0fbf547" class="wistia_embed" style="width:550px;height:309px;" data-video-width="550" data-video-height="309">&nbsp;</div>
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
 <script>
-wistiaEmbed = Wistia.embed("{{my.videoID:default=29b0fbf547}}", {
-  videoWidth: {{my.videowidth:default=550}},
-  videoHeight: {{my.videoheight:default=309}},
-  playerColor: "{{my.videocolor:default=688AAD}}"
+wistiaEmbed = Wistia.embed("29b0fbf547", {
+  videoWidth: 550,
+  videoHeight: 309,
+  playerColor: "688AAD"
 });
 
 // the bind function below will watch for when the video plays, and then send a "visited web page" action to the munchkin API.
@@ -16,7 +16,7 @@ wistiaEmbed = Wistia.embed("{{my.videoID:default=29b0fbf547}}", {
 wistiaEmbed.bind('play', function() {
 		mktoMunchkin("XXX-XXX-XXX");
 		mktoMunchkinFunction('visitWebPage', {
-		url: '/{{my.videoplayURL:default=/VideoTrackingTest}}/play', params: 'x=y&2=3'
+		url: '/video/play', params: 'x=y&2=3'
 });
 });
 </script>
