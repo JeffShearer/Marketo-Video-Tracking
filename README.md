@@ -1,7 +1,7 @@
 # Video Tracking with Marketo Munchkin
 Last Updated 5/21/2015
 New enhancements & fixes: 
--Added tracking of player start and end events (Wistia & YouTube)
+- Added tracking of player start and end events (Wistia & YouTube)
 - Updated token naming conventions
 - Fixed an issue with the Wistia tokenized script and player
 dimensions.
